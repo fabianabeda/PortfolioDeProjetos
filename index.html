@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfólio</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <header class="cabeçalho">
+      <div class="portfolio-background"></div>
+      <div class="name-portfolio">Portfólio</div>
+    </header>
+
+    <main class="corpo">
+      <div class="coluna-esq">
+        <div class="foto">
+          <img src="img/perfil.JPG" alt="perfil"> 
+        </div>
+        <div class="name-titulo">
+          <span><b>Fabiana Beda</b></span>
+        </div>
+        <div class="name-cont">
+          <div class="cargo">
+            <span>Analista de Dados e Desenvolvedora de Sistemas</span>
+          </div>
+        </div>
+    
+        <div class="redes-sociais"></div>
+
+        <div class="name-titulo">
+          <span><b>Apresentação</b></span>
+        </div>
+        <div class="apresentacao">
+          <p>
+            Me chamo Fabiana Oliveira Beda Macêdo, graduada em Sistemas para Internet pelo IFPB e mestranda em Engenharia Elétrica. Atuo com foco em análise e visualização de dados, integração de informações e apoio à tomada de decisão. Minha trajetória inclui projetos nas áreas de Business Intelligence, dados públicos e ambientais. Antes de migrar para a tecnologia, atuei como advogada na área cível bancária.
+          </p>
+        </div>
+        <div class="name-titulo">
+          <span><b>Formação</b></span>
+        </div>
+        <div class="dados">
+            <p>
+              <span class="links">
+                <a href="https://estudante.ifpb.edu.br/cursos/39/">Sistemas para Internet</a>
+              </span>
+              <span class="links">
+                <a href="https://www.ifpb.edu.br/">IFPB</a>
+              </span>
+            </p>
+            <p>
+              <span class="links">
+                <a href="https://estudante.ifpb.edu.br/cursos/39/">Direito</a>
+              </span>
+              <span class="links">
+                <a href="www.uniceub.br/">UniCeub</a>
+              </span>
+            </p>
+            
+        <div class="name-titulo">
+          <span><b>Tecnologias</b></span>
+        </div>
+          <div class="habilidades"></div>
+        </div>
+        <!-- <a href="pages/formulario.html"> <button class="botao-contato">Contate-me</button> </a> -->
+        
+
+      </div>
+    
+      <div class="coluna-dir">
+        <div class="bar-col-dir">
+          <div id="button-alt">
+            <button onclick="alternarcontato();" class="botoesalternadores">Projetos</button>
+            <button onclick="alternaprojeto();" class="botoesalternadores">Contatos</button>
+          </div>
+          <!-- <div class="search-bar">
+            <input type="text" name="pesquisa" placeholder="Digite o nome do projeto!">
+            <div class="search">
+              <i class="fas fa-search"></i>
+            </div>
+          </div> -->
+        </div>
+        
+        <div class="projetos">
+          <div class="itens"></div>
+        </div>
+        <div class="contatos">
+          <div class="itens-contatos"></div>  
+        </div>  
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <p>Desenvolvido por 
+        <a href="https://www.linkedin.com/in/fabiana-o-beda-m/">@Fabiana Beda</a>
+      </p>
+    </footer>
+    
+    
+    <script src="/js/script.js" ></script>
+    <script src="/js/scripts-cards/script-card-projetos.js" type="module"></script>
+    <script src="/js/scripts-cards/script-card-contatos.js" type="module"></script>
+    <script src="/js/scripts-cards/card-habilidades.js" type="module"></script>
+  </body>
+</html>

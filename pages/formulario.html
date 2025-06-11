@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Formulário</title>
+</head>
+<body>
+    <main class="container">
+        <div class="container-cont">
+            <h1>Como posso ajuda-lo?</h1>
+        <p>Preencha o formulario abaixo que entrarei em contato.</p>
+        <div class="inputs">
+            <form id="formValid">
+                <select name="select-assunto" aria-label="Teste" aria-required="true" area-invalid="false" required>
+                    <option value="" selected disabled hidden>Assunto...</option>
+                    <option value=""> </option>
+                    <option value="feedBack">FeedBack e susgestão</option>
+                    <option value="Necessito de orientação">Necessito de orientação</option>
+                    <option value="Sujestão de serviço">Sujestão de serviço</option>
+                </select>
+                <div class="handleUser">
+                    <input type="text" placeholder="Nome" required/>
+                    <input type="text" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                    <input type="text" id="cep" placeholder="CEP"/>
+                    <input type="text" id="endereco" placeholder="Endereço"/>
+                    <textarea name="text-user" ></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+            <div class="containerSocial">
+                <h2>Redes Sociais</h2>
+                <ul>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+    </main>
+    <script src="../js/endereco.js" type="module"></script>
+</body>
+
+</html>

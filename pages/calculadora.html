@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="../css/calc.css">
+</head>
+
+<body>
+  <!-- <form> -->
+    <div class="janelas">
+      <div class="calculadora">
+        <div class="bar">
+          <a href="../index.html"><div class="X">X</div></a>
+        </div>
+        <button onclick="historico();"  class="historico">Histórico</button>
+        <div class="tela-resultado">
+          <h1></h1>
+        </div>
+        <div class="teclado">
+            primeiro valor
+          <div class="bar-1"> 
+            <input type="number" name="bar1" id="num1">
+          </div>
+            segundo valor
+          <div class="bar-2 bar-1">
+            <input type="number" name="bar2" id="num2">
+          </div>
+          operações
+          <div class="botoes">
+            <button onclick="soma();">+</button>
+            <button onclick="sub();">-</button>
+            <button onclick="mult();">*</button>
+            <button onclick="div();">/</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="tela-historico">
+        <div class="bar">
+          <a onclick="fechahistorico();" href="#"><div class="X">X</div></a>
+        </div>
+        <div class="tela">
+          
+         
+        </div>
+      </div>
+    </div>
+  <!-- </form> -->
+  
+  <script src="../js/script-calc.js"></script>
+
+</body>
+
+</html>
