@@ -25,7 +25,7 @@ const dataset = [
     },
     {
         id: 'Redealogando',
-        image: 'img/site-pessoas-depressao.png',
+        image: 'img/depressao.png',
         textodesc: 'Site desenvolvido com HTML5 e CSS3 para apoio a pessoas com depressão e ansiedade. Oferece conteúdo informativo, dicas de autocuidado, contatos de apoio psicológico e mensagens motivacionais. Interface responsiva com foco em acessibilidade, linguagem acolhedora e design pensado para transmitir conforto e empatia.',
         endereco: 'https://fabianabeda.github.io/Redealogando/',
     },
