@@ -1,13 +1,13 @@
 const dataset = [
     {
         id: 'LicitTrack',
-        image: 'img/licitTrack.png',
+        image: 'img/licittrack.png',
         textodesc: 'Sistema analítico para monitoramento de licitações públicas, com backend em Node.js, frontend em React e banco de dados MongoDB. Integrado a APIs públicas do PNCP, o projeto foi registrado no INPI e hospedado via Netlify, evidenciando seu caráter técnico e inovador.',
         endereco: '',
     },
     {
         id: 'Pipeline de Dados Ambientais',
-        image: 'img/Desmatamento.PNG',
+        image: 'img/Desmatamento.png',
         textodesc: 'Pipeline construído com dados das APIs AQICN (qualidade do ar) e MapBiomas (uso do solo). Utilizou Airflow para orquestração, MinIO para armazenamento, Spark para processamento e PostgreSQL para carga de dados, com visualizações em Power BI.',
         endereco: 'https://app.powerbi.com/view?r=eyJrIjoiM2UwMjc0MWMtNGM0Ni00ZjAxLWJmYjItOTBlMjE1Y2UxY2RkIiwidCI6IjVhM2UxZWI5LWM3NzctNDQ1YS04MjQyLWQ4MjVhNDYxYjEyYiJ9',
     },
@@ -25,7 +25,7 @@ const dataset = [
     },
     {
         id: 'Redealogando',
-        image: 'img/site-pessoas-depressao.PNG',
+        image: 'img/site-pessoas-depressao.png',
         textodesc: 'Site desenvolvido com HTML5 e CSS3 para apoio a pessoas com depressão e ansiedade. Oferece conteúdo informativo, dicas de autocuidado, contatos de apoio psicológico e mensagens motivacionais. Interface responsiva com foco em acessibilidade, linguagem acolhedora e design pensado para transmitir conforto e empatia.',
         endereco: 'https://fabianabeda.github.io/Redealogando/',
     },
