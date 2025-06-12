@@ -15,7 +15,7 @@ const dataset = [
         id: 'Nothwind',
         image: 'img/northwind.png',
         textodesc: 'Projeto acadêmico voltado ao setor comercial de uma empresa fictícia. Envolveu o uso do Power BI e Pentaho Data Integration para modelagem dimensional e criação de dashboards interativos com dados de clientes, produtos, vendedores e fornecedores.',
-        endereco: '/docs/northwind.pdf',
+        endereco: 'docs/northwind.pdf',
     },
     {
         id: 'Portal de Serviços',
