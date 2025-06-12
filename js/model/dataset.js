@@ -1,7 +1,7 @@
 const dataset = [
     {
         id: 'LicitTrack',
-        image: 'img/licittrack.png',
+        image: 'img/projeto-licittrack.png',
         textodesc: 'Sistema analítico para monitoramento de licitações públicas, com backend em Node.js, frontend em React e banco de dados MongoDB. Integrado a APIs públicas do PNCP, o projeto foi registrado no INPI e hospedado via Netlify, evidenciando seu caráter técnico e inovador.',
         endereco: '',
     },
