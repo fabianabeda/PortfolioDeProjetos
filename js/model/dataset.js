@@ -7,7 +7,7 @@ const dataset = [
     },
     {
         id: 'Pipeline de Dados Ambientais',
-        image: 'img/desmatamento.png',
+        image: 'img/desmat3.png',
         textodesc: 'Pipeline construído com dados das APIs AQICN (qualidade do ar) e MapBiomas (uso do solo). Utilizou Airflow para orquestração, MinIO para armazenamento, Spark para processamento e PostgreSQL para carga de dados, com visualizações em Power BI.',
         endereco: 'pages/pipeline.html'
     },
