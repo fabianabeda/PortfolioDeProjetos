@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pipeline de Dados Ambientais - Detalhes do Projeto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    main.corpo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .coluna-dir {
+      width: 90%;
+      max-width: none;
+      background-color: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .coluna-dir h1 {
+      color: #4b0082;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .bloco {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .bloco img {
+      width: 45%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid #ccc;
+    }
+
+    .bloco p {
+      width: 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+      text-align: justify;
+    }
+
+    .invertido {
+      flex-direction: row-reverse;
+    }
+
+    .botoes-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+
+    .botao-voltar, .link-github {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      background-color: #4b0082;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: auto;
+    }
+
+    .botao-voltar:hover, .link-github:hover {
+      background-color: #36006a;
+    }
+
+    @media (max-width: 768px) {
+      .bloco {
+        flex-direction: column !important;
+      }
+      .bloco img,
+      .bloco p {
+        width: 100%;
+      }
+      .coluna-dir {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="corpo">
+    <div class="coluna-dir">
+
+      <h1>Pipeline de Dados Ambientais</h1>
+
+      <section class="bloco">
+        <img src="../img/desmatamento.png" alt="Dados ambientais AQICN e MapBiomas" />
+        <p>
+          Projeto do mestrado profissional PPGTI - IFPB que integra dados do <strong>MapBiomas</strong> e <strong>AQICN</strong> para análise ambiental. A proposta foi desenvolver um pipeline completo e automatizado com governança de dados, processando informações de desmatamento e qualidade do ar para posterior visualização em dashboards interativos.
+        </p>
+      </section>
+
+      <section class="bloco invertido">
+        <p>
+          A orquestração das tarefas foi feita com <strong>Apache Airflow</strong>, usando <code>PythonOperator</code> para organizar a DAG de extração, transformação e disponibilização dos dados. Todo o ambiente foi containerizado com <strong>Docker</strong>, garantindo escalabilidade e portabilidade do projeto.
+        </p>
+        <img src="../img/fluxo_dag.png" alt="DAG no Apache Airflow com operadores Python" />
+      </section>
+
+      <section class="bloco">
+        <img src="../img/buckets_minio.png" alt="Buckets organizados no MiniIO com governança de dados" />
+        <p>
+          Os dados foram armazenados em buckets do <strong>MinIO</strong>, simulando uma arquitetura de Data Lake com camadas: <strong>Raw</strong> (dados brutos), <strong>Staging</strong> (dados intermediários tratados) e <strong>Trusted</strong> (dados prontos para consumo). Essa organização permite governança e reuso dos dados.
+          Após o processamento com <strong>Apache Spark</strong>, os dados foram convertidos para o formato <strong>Parquet</strong> e salvos no <strong>PostgreSQL</strong>. Assim, os dados puderam ser modelados para consumo analítico com ferramentas como <strong>Power BI</strong>.
+        </p>
+      </section>
+
+
+      <section class="bloco">
+        <img src="../img/desm1.png" alt="Dashboard MapBiomas área suprimida por município" />
+        <p>
+          A visualização final no <strong>Power BI</strong> permite entender os municípios com maior área de vegetação suprimida, assim como os estados mais impactados. Os gráficos e tabelas apresentam dados atualizados e filtráveis por ano, promovendo maior transparência ambiental.
+        </p>
+      </section>
+
+      <section class="bloco invertido">
+        <p>
+          O uso do <strong>MapBiomas API</strong> no pipeline permitiu o download direto dos dados por meio de integração GraphQL. A conexão foi configurada no Airflow como <code>mapbiomas_login</code>, enquanto o MinIO foi acessado pela conexão <code>minio</code>.
+        </p>
+        <img src="../img/connections_airflow.png" alt="Conexões configuradas no Apache Airflow" />
+      </section>
+
+      <div class="botoes-links">
+        <a href="https://github.com/marinamaracaja/integracao-dados-ifpb" class="botao-voltar" target="_blank">Ver repositório no GitHub</a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiM2UwMjc0MWMtNGM0Ni00ZjAxLWJmYjItOTBlMjE1Y2UxY2RkIiwidCI6IjVhM2UxZWI5LWM3NzctNDQ1YS04MjQyLWQ4MjVhNDYxYjEyYiJ9" class="botao-voltar" target="_blank">Ver dashboard no Power BI</a>
+        <a href="../index.html" class="botao-voltar">← Voltar ao Portfólio</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

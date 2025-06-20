@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portal de Serviços - Detalhes do Projeto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    main.corpo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .coluna-dir {
+      width: 90%;
+      max-width: none;
+      background-color: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .coluna-dir h1 {
+      color: #4b0082;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .bloco {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .bloco img {
+      width: 45%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid #ccc;
+    }
+
+    .bloco p {
+      width: 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+      text-align: justify;
+    }
+
+    .invertido {
+      flex-direction: row-reverse;
+    }
+
+    .botoes-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+
+    .botao-voltar, .link-github {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      background-color: #4b0082;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: auto;
+    }
+
+    .botao-voltar:hover, .link-github:hover {
+      background-color: #36006a;
+    }
+
+    @media (max-width: 768px) {
+      .bloco {
+        flex-direction: column !important;
+      }
+      .bloco img,
+      .bloco p {
+        width: 100%;
+      }
+      .coluna-dir {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="corpo">
+    <div class="coluna-dir">
+
+      <h1>Portal de Serviços</h1>
+
+      <section class="bloco">
+        <img src="../img/portal.png" alt="Tela inicial do Portal de Serviços" />
+        <p>
+          O <strong>Portal de Serviços de Inteligência de Dados</strong> foi desenvolvido no âmbito do estágio obrigatório do curso de <strong>Tecnologia em Sistemas para Internet</strong> do <strong>IFPB</strong>, realizado na <strong>Unidade de Gestão Estratégica e Monitoramento (UGEM)</strong> do <strong>Sebrae-PB</strong>. O projeto foi pensado para substituir o antigo sistema SIME, modernizando a interface e melhorando a usabilidade e acessibilidade dos serviços oferecidos.
+        </p>
+      </section>
+
+      <section class="bloco invertido">
+        <p>
+          A plataforma foi desenvolvida com <strong>Python e Django</strong> no backend e <strong>HTML, CSS, JavaScript e Bootstrap</strong> no frontend. A estrutura do sistema contempla um módulo para funcionários, com acesso aos conteúdos analíticos, e um módulo administrativo com controle completo de postagens, permissões de usuários e atualizações. 
+        </p>
+        <img src="../img/portal3.png" alt="Visualização do conteúdo do portal" />
+      </section>
+
+      <section class="bloco">
+        <img src="../img/portal4.png" alt="Interface administrativa do Portal" />
+        <p>
+          O sistema implementa autenticação por perfil, navegação por sidebar dinâmica e integra os links de acesso aos painéis analíticos da organização, hospedados no Qlik Sense. A interface foi pensada para ser totalmente responsiva, adaptando-se a desktops e dispositivos móveis. Testes unitários foram desenvolvidos com Django para garantir robustez e confiabilidade no código.
+        </p>
+      </section>
+
+      <div class="botoes-links">
+        <a href="https://github.com/fabianabeda/Portal_de_Servicos_de_Inteligencia_de_Dados" class="botao-voltar" target="_blank">Ver repositório no GitHub</a>
+        <a href="../index.html" class="botao-voltar">&larr; Voltar ao Portfólio</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
+

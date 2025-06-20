@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LicitTrack - Detalhes do Projeto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    header p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    main.corpo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .coluna-dir {
+      width: 90%;
+      max-width: none;
+      background-color: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .coluna-dir h1 {
+      color: #4b0082;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .bloco {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .bloco img {
+      width: 50%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid #ccc;
+    }
+
+    .bloco p {
+      width: 50%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0;
+      text-align: justify;
+    }
+
+    .invertido {
+      flex-direction: row-reverse;
+    }
+
+    .botoes-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+
+    .botao-voltar, .link-github {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      background-color: #4b0082;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: auto;
+    }
+
+    .botao-voltar:hover, .link-github:hover {
+      background-color: #36006a;
+    }
+
+    @media (max-width: 768px) {
+      .bloco {
+        flex-direction: column;
+      }
+      .bloco img,
+      .bloco p {
+        width: 100%;
+      }
+      .coluna-dir {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="corpo">
+    <div class="coluna-dir">
+
+      <h1>LicitTrack</h1>
+
+      <section class="bloco">
+        <img src="../img/projeto-licittrack.png" alt="Dashboard do LicitTrack com filtros e indicadores" />
+        <p>
+          Projeto desenvolvido no Mestrado Profissional em Tecnologia da Informação do IFPB, com foco em soluções analíticas aplicadas ao setor público.
+          O <strong>LicitTrack</strong> surgiu para solucionar a dificuldade enfrentada por gestores públicos, pesquisadores e fornecedores ao acessarem informações sobre licitações. Os dados disponíveis no <strong>Portal Nacional de Contratações Públicas (PNCP)</strong> são fragmentados, inconsistentes e pouco acessíveis para análise. A proposta do projeto foi consolidar essas informações em uma plataforma analítica única e interativa.<br><br>
+
+          A solução técnica envolveu a construção de um <strong>pipeline de dados em Python</strong> com extração via múltiplos endpoints da API do PNCP. Para acelerar o processo, implementei paralelismo com <code>ThreadPoolExecutor</code>. Após a extração, os dados JSON foram padronizados e armazenados em um banco <strong>MongoDB</strong>, estruturado para consultas analíticas e suporte a dados aninhados.<br><br>
+
+          Com os dados modelados, desenvolvi um painel frontend em <strong>React + Tailwind CSS</strong>. O dashboard oferece visualização por indicadores <strong>estratégicos</strong> (valor licitado, evolução anual), <strong>táticos</strong> (modalidades e órgãos contratantes) e <strong>operacionais</strong> (status de licitações, itens mais licitados). O sistema é responsivo, interativo e pensado para autoatendimento (self-service BI).
+        </p>
+      </section>
+
+      <section class="bloco">
+        <img src="../img/empresasparticipantes.png" alt="Painel com fornecedores participantes de licitações" />
+        <p>
+          Uma das seções do painel permite a análise dos <strong>fornecedores participantes</strong> nas licitações, com visualização do número de empresas por ano, tipo jurídico e ranking dos maiores participantes. Essa funcionalidade fornece insights valiosos para tomada de decisão e análise de mercado público.
+        </p>
+      </section>
+
+      <section class="bloco">
+        <img src="../img/itenslicitados.png" alt="Painel com itens mais licitados e seus valores" />
+        <p>
+          O sistema também oferece um painel para a <strong>análise dos itens mais licitados</strong>, permitindo observar quais produtos ou serviços concentram maiores volumes em contratos públicos. Os dados são filtráveis por localidade e ano, com totalização e ordenação automática dos valores licitados.
+        </p>
+      </section>
+
+      <section class="bloco">
+        <img src="../img/certificado_recortado.jpg" alt="Registro de software no INPI (recortado)" />
+        <p>
+          O <strong>LicitTrack</strong> foi <strong>registrado no Instituto Nacional da Propriedade Industrial (INPI)</strong>, o que reforça sua originalidade e caráter inovador. Esse reconhecimento formal fortalece a relevância do projeto como solução tecnológica aplicada à gestão pública e à transparência.
+        </p>
+      </section>
+
+      <section class="bloco">
+        <img src="../img/tecnologias.png" alt="Tecnologias usadas no projeto" />
+        <p>
+          O projeto visa facilitar o acesso e análise de dados públicos, promovendo transparência e eficiência.
+          O desenvolvimento do LicitTrack envolveu o uso de diversas tecnologias modernas.
+        </p>
+      </section>
+
+      <div class="botoes-links">
+        <a href="https://github.com/fabianabeda/datadriven_back" class="botao-voltar" target="_blank">Ver repositório no GitHub</a>
+        <a href="../index.html" class="botao-voltar">&larr; Voltar ao Portfólio</a>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
