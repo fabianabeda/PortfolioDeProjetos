@@ -34,29 +34,34 @@
 
     .bloco {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 20px;
       margin-bottom: 40px;
     }
 
     .bloco img {
-      width: 45%;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border: 1px solid #ccc;
     }
 
     .bloco p {
-      width: 55%;
+      width: 100%;
       font-size: 1.1rem;
       line-height: 1.6;
       margin: 0;
       text-align: justify;
     }
 
+
     .invertido {
-      flex-direction: row-reverse;
+      flex-direction: column;
     }
+
 
     .botoes-links {
       display: flex;
@@ -112,10 +117,11 @@
       </section>
 
       <section class="bloco invertido">
-        <p>
+       <img src="../img/redealogando2.png" alt="Conteúdo informativo no site Redealogando" /> 
+       <p>
           Conhecida como o “mal do século”, a depressão afeta milhões de pessoas no mundo. Muitas vezes, é mal compreendida, sendo confundida com fraqueza ou tristeza passageira. O projeto <strong>Redealogando</strong> surge para desmistificar essa condição e romper tabus, abordando de forma clara e empática temas como sintomas, diferenciação entre tristeza e depressão, e onde buscar ajuda.
         </p>
-        <img src="../img/redealogando2.png" alt="Conteúdo informativo no site Redealogando" />
+        
       </section>
 
       <section class="bloco">

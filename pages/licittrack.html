@@ -41,30 +41,34 @@
 
     .bloco {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 20px;
       margin-bottom: 40px;
     }
 
     .bloco img {
-      width: 50%;
-      max-width: 600px;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border: 1px solid #ccc;
     }
 
     .bloco p {
-      width: 50%;
+      width: 100%;
       font-size: 1.1rem;
       line-height: 1.6;
       margin: 0;
       text-align: justify;
     }
 
+
     .invertido {
-      flex-direction: row-reverse;
+      flex-direction: column;
     }
+
 
     .botoes-links {
       display: flex;

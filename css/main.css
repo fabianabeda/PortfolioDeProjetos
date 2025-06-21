@@ -156,6 +156,28 @@ body {
   padding: 8px;
   transition: padding 1s;
 }
+.lista-formacao {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lista-formacao li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.lista-formacao a {
+  color: #4b0082;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lista-formacao a:hover {
+  color: #36006a;
+}
+
 
 
 .coluna-dir {
@@ -243,9 +265,15 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 8px;
   
 }
+.itens-contatos img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 
 .item {
   display: flex;
@@ -389,12 +417,17 @@ button {
   .corpo {
     flex-direction: column;
     padding: 0 10px;
+    align-items: center; /* Centraliza o conteúdo dentro do container */
   }
 
   .coluna-esq, .coluna-dir {
     width: 100%;
-    margin: 10px 0;
+    max-width: 400px; /* Limita a largura máxima para visual bonito */
+    margin: 10px auto; /* Centraliza horizontalmente */
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo interno dos cards ao centro */
   }
 
   .name-portfolio {
@@ -415,25 +448,30 @@ button {
 
   .item {
     width: 100%;
+    max-width: 350px; /* Limita largura do card individual */
+    margin: 0 auto; /* Centraliza */
   }
 
   .bar-col-dir {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .botoesalternadores {
     margin-bottom: 10px;
     width: 100%;
+    text-align: center;
   }
 
   .rodape p {
     font-size: 16px;
     padding: 10px;
+    text-align: center;
   }
 
   .apresentacao, .dados p, .habilidades {
     margin: 10px;
+    text-align: center;
   }
 }
 
@@ -457,5 +495,6 @@ button {
   .botoes-item, .btn-copiar {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 }

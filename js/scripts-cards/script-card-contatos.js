@@ -20,7 +20,7 @@ function criadordecards(cards) {
                 </div>  
             </div>
             <div class="bottom-item">
-                <p class="description">Descrição</p>
+                <p class="description"></p>
                 <p class="text-description">${cards.textodesc}</p>
             </div>
             <div class="botoes-item">

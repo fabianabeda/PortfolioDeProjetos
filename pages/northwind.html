@@ -34,29 +34,34 @@
 
     .bloco {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 20px;
       margin-bottom: 40px;
     }
 
     .bloco img {
-      width: 50%;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border: 1px solid #ccc;
     }
 
     .bloco p {
-      width: 50%;
+      width: 100%;
       font-size: 1.1rem;
       line-height: 1.6;
       margin: 0;
       text-align: justify;
     }
 
+
     .invertido {
-      flex-direction: row-reverse;
+      flex-direction: column;
     }
+
 
     .botoes-links {
       display: flex;
@@ -105,19 +110,19 @@
       <h1>Northwind</h1>
 
       <section class="bloco invertido">
+        <img src="../img/northwind.png" alt="Indicadores comerciais no Power BI" />
         <p>
           O projeto <strong>Northwind</strong> foi desenvolvido no âmbito da disciplina <strong>Inteligência Empresarial</strong> do curso de <strong>Tecnologia em Sistemas para Internet</strong> do <strong>IFPB</strong>, simulando uma situação real em uma empresa fictícia do setor atacadista de alimentos com atuação global. A diretoria da empresa contratou uma consultoria de Business Intelligence (BI) com o objetivo de criar uma aplicação analítica voltada à área comercial.
           <br><br>
           A consultoria foi responsável por levantar os requisitos de análise, elaborar o <strong>modelo dimensional</strong> com suporte a Slowly Changing Dimensions, desenvolver os processos de <strong>ETL no Pentaho Data Integration (PDI)</strong> e construir a camada de visualização em <strong>Power BI</strong> com foco em decisões estratégicas e operacionais. O projeto contemplou desde a modelagem até a entrega de relatórios visuais dinâmicos.
         </p>
-        <img src="../img/north2.png" alt="Dashboard analítico Northwind" />
       </section>
 
       <section class="bloco invertido">
+        <img src="../img/north2.png" alt="Dashboard analítico Northwind" />
         <p>
           A solução oferece insights sobre os <strong>principais clientes, faturamento médio por cliente, quantidade de clientes por país</strong> e informações para ações comerciais. Os dados extraídos e tratados foram carregados no <strong>data mart</strong> com base no modelo em estrela. 
         </p>
-        <img src="../img/northwind.png" alt="Indicadores comerciais no Power BI" />
       </section>
 
       <div class="botoes-links">
