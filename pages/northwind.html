@@ -57,11 +57,9 @@
       text-align: justify;
     }
 
-
     .invertido {
       flex-direction: column;
     }
-
 
     .botoes-links {
       display: flex;
@@ -112,16 +110,20 @@
       <section class="bloco invertido">
         <img src="../img/northwind.png" alt="Indicadores comerciais no Power BI" />
         <p>
-          O projeto <strong>Northwind</strong> foi desenvolvido no âmbito da disciplina <strong>Inteligência Empresarial</strong> do curso de <strong>Tecnologia em Sistemas para Internet</strong> do <strong>IFPB</strong>, simulando uma situação real em uma empresa fictícia do setor atacadista de alimentos com atuação global. A diretoria da empresa contratou uma consultoria de Business Intelligence (BI) com o objetivo de criar uma aplicação analítica voltada à área comercial.
+          O projeto <strong>Northwind</strong> foi realizado na disciplina <strong>Inteligência Empresarial</strong> do curso de <strong>Tecnologia em Sistemas para Internet</strong> no <strong>IFPB</strong>, com o desafio de estruturar uma solução de Business Intelligence para uma empresa fictícia do setor atacadista de alimentos.
           <br><br>
-          A consultoria foi responsável por levantar os requisitos de análise, elaborar o <strong>modelo dimensional</strong> com suporte a Slowly Changing Dimensions, desenvolver os processos de <strong>ETL no Pentaho Data Integration (PDI)</strong> e construir a camada de visualização em <strong>Power BI</strong> com foco em decisões estratégicas e operacionais. O projeto contemplou desde a modelagem até a entrega de relatórios visuais dinâmicos.
+          A empresa possuía dados operacionais dispersos e desorganizados, o que impedia análises gerenciais efetivas. Nosso objetivo foi transformar esse cenário por meio de um sistema analítico completo que oferecesse suporte à tomada de decisão baseada em dados.
+          <br><br>
+          A solução foi desenvolvida com o <strong>Pentaho Data Integration (PDI)</strong>, responsável por todo o processo de ETL: extração de dados do banco <strong>MySQL</strong>, aplicação de regras de negócio, limpeza e carregamento para um novo <strong>Data Warehouse</strong>. A modelagem foi feita no formato estrela, com tabela fato central e tabelas dimensão como Produto, Cliente, Vendedor e Tempo.
         </p>
       </section>
 
       <section class="bloco invertido">
         <img src="../img/north2.png" alt="Dashboard analítico Northwind" />
         <p>
-          A solução oferece insights sobre os <strong>principais clientes, faturamento médio por cliente, quantidade de clientes por país</strong> e informações para ações comerciais. Os dados extraídos e tratados foram carregados no <strong>data mart</strong> com base no modelo em estrela. 
+          Para facilitar a análise dos dados, desenvolvemos dashboards com <strong>Power BI</strong>, apresentando KPIs estratégicos (faturamento por região), táticos (ranking de produtos, ticket médio) e operacionais (desempenho por vendedor). O painel interativo proporcionou aos usuários uma visão integrada e autônoma do desempenho comercial.
+          <br><br>
+          A entrega final foi uma aplicação analítica clara e eficiente, com estrutura reutilizável e foco na autonomia do usuário. O projeto demonstrou na prática como é possível transformar dados brutos em inteligência de negócio com impacto direto nas decisões corporativas.
         </p>
       </section>
 
@@ -135,3 +137,5 @@
 
 </body>
 </html>
+
+

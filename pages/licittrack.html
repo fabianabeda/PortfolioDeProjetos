@@ -64,12 +64,6 @@
       text-align: justify;
     }
 
-
-    .invertido {
-      flex-direction: column;
-    }
-
-
     .botoes-links {
       display: flex;
       flex-direction: column;
@@ -119,11 +113,11 @@
         <img src="../img/projeto-licittrack.png" alt="Dashboard do LicitTrack com filtros e indicadores" />
         <p>
           Projeto desenvolvido no Mestrado Profissional em Tecnologia da Informação do IFPB, com foco em soluções analíticas aplicadas ao setor público.
-          O <strong>LicitTrack</strong> surgiu para solucionar a dificuldade enfrentada por gestores públicos, pesquisadores e fornecedores ao acessarem informações sobre licitações. Os dados disponíveis no <strong>Portal Nacional de Contratações Públicas (PNCP)</strong> são fragmentados, inconsistentes e pouco acessíveis para análise. A proposta do projeto foi consolidar essas informações em uma plataforma analítica única e interativa.<br><br>
+          O <strong>LicitTrack</strong> surgiu para solucionar a dificuldade enfrentada por gestores públicos, pesquisadores e fornecedores ao acessarem informações sobre licitações. Os dados disponíveis no <strong>Portal Nacional de Contratações Públicas (PNCP)</strong> eram fragmentados, inconsistentes e pouco acessíveis para análise. A proposta do projeto foi consolidar essas informações em uma plataforma analítica única e interativa.<br><br>
 
-          A solução técnica envolveu a construção de um <strong>pipeline de dados em Python</strong> com extração via múltiplos endpoints da API do PNCP. Para acelerar o processo, implementei paralelismo com <code>ThreadPoolExecutor</code>. Após a extração, os dados JSON foram padronizados e armazenados em um banco <strong>MongoDB</strong>, estruturado para consultas analíticas e suporte a dados aninhados.<br><br>
+          A solução técnica envolveu a construção de um <strong>pipeline de dados</strong> com extração via múltiplos endpoints da API do PNCP. Para acelerar o processo, implementamos requisições paralelas que otimizam o tempo de coleta. Após a extração, os dados JSON foram padronizados e armazenados em um banco <strong>MongoDB</strong>, estruturado para consultas analíticas e suporte a dados aninhados.<br><br>
 
-          Com os dados modelados, desenvolvi um painel frontend em <strong>React + Tailwind CSS</strong>. O dashboard oferece visualização por indicadores <strong>estratégicos</strong> (valor licitado, evolução anual), <strong>táticos</strong> (modalidades e órgãos contratantes) e <strong>operacionais</strong> (status de licitações, itens mais licitados). O sistema é responsivo, interativo e pensado para autoatendimento (self-service BI).
+          Com os dados modelados, desenvolvemos um painel frontend em <strong>React + Tailwind CSS</strong>. O dashboard oferece visualização por indicadores <strong>estratégicos</strong> (valor licitado, evolução anual), <strong>táticos</strong> (modalidades e órgãos contratantes) e <strong>operacionais</strong> (status de licitações, itens mais licitados). O sistema é responsivo, interativo e pensado para autoatendimento (self-service BI).
         </p>
       </section>
 

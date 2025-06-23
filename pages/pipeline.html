@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Pipeline de Dados Ambientais - Detalhes do Projeto</title>
+  <title>Integração de Dados Ambientais - Detalhes do Projeto</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -57,11 +57,9 @@
       text-align: justify;
     }
 
-
     .invertido {
       flex-direction: column;
     }
-
 
     .botoes-links {
       display: flex;
@@ -107,42 +105,41 @@
   <main class="corpo">
     <div class="coluna-dir">
 
-      <h1>Pipeline de Dados Ambientais</h1>
+      <h1>Integração de Dados Ambientais</h1>
 
       <section class="bloco">
-        <img src="../img/desm3.png" alt="Dados ambientais AQICN e MapBiomas" />
+        <img src="../img/desm3.png" alt="Mapa de desmatamento e qualidade do ar" />
         <p>
-          Projeto do mestrado profissional PPGTI - IFPB que integra dados do <strong>MapBiomas</strong> e <strong>AQICN</strong> para análise ambiental. A proposta foi desenvolver um pipeline completo e automatizado com governança de dados, processando informações de desmatamento e qualidade do ar para posterior visualização em dashboards interativos.
+          Projeto acadêmico desenvolvido durante o Mestrado Profissional em Tecnologia da Informação (IFPB), com o objetivo de integrar dados ambientais para análise de impactos urbanos. Os dados utilizados provinham do <strong>AQICN</strong> (qualidade do ar) e do <strong>MapBiomas</strong> (uso do solo). Apesar de serem públicos, os dados estavam em formatos distintos e complexos de integrar.
         </p>
       </section>
 
       <section class="bloco invertido">
-        <img src="../img/fluxo_dag.png" alt="DAG no Apache Airflow com operadores Python" />
+        <img src="../img/fluxo_dag.png" alt="DAG Airflow para orquestração do pipeline" />
         <p>
-          A orquestração das tarefas foi feita com <strong>Apache Airflow</strong>, usando <code>PythonOperator</code> para organizar a DAG de extração, transformação e disponibilização dos dados. Todo o ambiente foi containerizado com <strong>Docker</strong>, garantindo escalabilidade e portabilidade do projeto.
+          Construímos um pipeline automatizado e escalável, orquestrado com <strong>Apache Airflow</strong> utilizando <code>PythonOperator</code> para estruturar o fluxo ETL. O ambiente foi totalmente containerizado com <strong>Docker</strong>, promovendo reprodutibilidade e escalabilidade para diferentes contextos.
         </p>
       </section>
 
       <section class="bloco">
-        <img src="../img/buckets_minio.png" alt="Buckets organizados no MiniIO com governança de dados" />
+        <img src="../img/buckets_minio.png" alt="Arquitetura em camadas com MinIO" />
         <p>
-          Os dados foram armazenados em buckets do <strong>MinIO</strong>, simulando uma arquitetura de Data Lake com camadas: <strong>Raw</strong> (dados brutos), <strong>Staging</strong> (dados intermediários tratados) e <strong>Trusted</strong> (dados prontos para consumo). Essa organização permite governança e reuso dos dados.
-          Após o processamento com <strong>Apache Spark</strong>, os dados foram convertidos para o formato <strong>Parquet</strong> e salvos no <strong>PostgreSQL</strong>. Assim, os dados puderam ser modelados para consumo analítico com ferramentas como <strong>Power BI</strong>.
+          Os dados foram armazenados em um <strong>Data Lake</strong> construído com <strong>MinIO</strong>, organizados em camadas <strong>Raw</strong> (bruta), <strong>Staging</strong> (intermediária) e <strong>Trusted</strong> (confiável). Essa estrutura possibilitou versionamento, rastreabilidade e governança adequada.
+          O processamento foi realizado com <strong>Apache Spark</strong>, convertendo JSONs em arquivos <strong>Parquet</strong> otimizados. Em seguida, os dados foram carregados em um banco <strong>PostgreSQL</strong> com modelagem orientada à análise.
         </p>
       </section>
-
 
       <section class="bloco">
-        <img src="../img/desm1.png" alt="Dashboard MapBiomas área suprimida por município" />
+        <img src="../img/desm1.png" alt="Dashboard com KPIs ambientais no Power BI" />
         <p>
-          A visualização final no <strong>Power BI</strong> permite entender os municípios com maior área de vegetação suprimida, assim como os estados mais impactados. Os gráficos e tabelas apresentam dados atualizados e filtráveis por ano, promovendo maior transparência ambiental.
+          Para a visualização, conectamos o <strong>Power BI</strong> ao banco de dados e desenvolvemos dashboards com KPIs ambientais como níveis de poluição por município, áreas degradadas e comparações por ano. A interface foi pensada para usuários públicos, com navegação intuitiva e exploratória.
         </p>
       </section>
 
-      <section class="bloco invertido"> 
-        <img src="../img/connections_airflow.png" alt="Conexões configuradas no Apache Airflow" />
+      <section class="bloco invertido">
+        <img src="../img/connections_airflow.png" alt="Integração com APIs e conexão no Airflow" />
         <p>
-          O uso do <strong>MapBiomas API</strong> no pipeline permitiu o download direto dos dados por meio de integração GraphQL. A conexão foi configurada no Airflow como <code>mapbiomas_login</code>, enquanto o MinIO foi acessado pela conexão <code>minio</code>.
+          As integrações com APIs públicas foram realizadas diretamente no Airflow. O <strong>AQICN</strong> foi acessado via REST e o <strong>MapBiomas</strong> via <code>GraphQL</code>. As conexões foram autenticadas e documentadas como <code>mapbiomas_login</code> e <code>minio</code> no ambiente do pipeline.
         </p>
       </section>
 

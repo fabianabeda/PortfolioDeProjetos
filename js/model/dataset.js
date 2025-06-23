@@ -6,7 +6,7 @@ const dataset = [
         endereco: 'pages/licittrack.html',
     },
     {
-        id: 'Pipeline de Dados Ambientais',
+        id: 'Integração de Dados Ambientais',
         image: 'img/desm3.png',
         textodesc: 'Pipeline construído com dados das APIs AQICN (qualidade do ar) e MapBiomas (uso do solo). Utilizou Airflow para orquestração, MinIO para armazenamento, Spark para processamento e PostgreSQL para carga de dados, com visualizações em Power BI.',
         endereco: 'pages/pipeline.html'
@@ -26,7 +26,7 @@ const dataset = [
     {
         id: 'Redealogando',
         image: 'img/depressao.png',
-        textodesc: 'Site desenvolvido com HTML5 e CSS3 para apoio a pessoas com depressão e ansiedade. Oferece conteúdo informativo, dicas de autocuidado, contatos de apoio psicológico e mensagens motivacionais. Interface responsiva com foco em acessibilidade, linguagem acolhedora e design pensado para transmitir conforto e empatia.',
+        textodesc: 'Plataforma informativa criada com HTML5 e CSS3 para apoiar pessoas com depressão e ansiedade. Reúne conteúdos educativos, orientações de autocuidado, contatos para apoio psicológico e mensagens encorajadoras. Com interface responsiva, linguagem empática e foco em acessibilidade, o design foi pensado para acolher e promover bem-estar digital.',
         endereco: 'pages/redealogando.html',
     },
     {
